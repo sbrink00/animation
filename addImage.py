@@ -28,5 +28,3 @@ def addTextImage(screen, imagefile, move):
       newy,newx = y + move[1],x + move[0]
       if newy >= 0 and newy < len(screen) and newx >= 0 and newx < len(screen[0]):
         screen[newy][newx] = image[y][x]
-
-readImageFile("message.ppm")
