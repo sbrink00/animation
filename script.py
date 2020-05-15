@@ -217,7 +217,7 @@ def run(filename):
       #so the line below is specific to the gif I am submitting
       #it will be changed and hopefully added to the mdl.py file
       #later.
-      #addTextImage(screen, "message.ppm", (round((XRES - 185) * knobValues[x]["k0"]), 0))
+      addTextImage(screen, "message.image", (round((XRES - 185) * knobValues[x]["k0"]), 0))
       save_extension(screen, fname)
     termCommand = ["convert", "-delay", "3"] + images  + ["movie.gif"]
     subprocess.run(termCommand)
