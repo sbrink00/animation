@@ -1,8 +1,12 @@
+from __future__ import print_function
+from addImage import addTextImage
+import sys
 import mdl
 from display import *
 from matrix import *
 from draw import *
 import subprocess
+import time
 
 def dc(ary):
   return [x if type(x) is not list else dc(x) for x in ary]
@@ -108,8 +112,8 @@ def run(filename):
     stacks.append(stack)
     screen = new_screen()
     zbuffer = new_zbuffer()
-    tmp = []
-    step_3d = 50
+    #tmp = []
+    step_3d = 10
     consts = ''
     edges = []
     polygons = []
@@ -121,15 +125,21 @@ def run(filename):
     threeDStuffs = ["box", "sphere", "torus"]
     images = []
     for x in range(num_frames):
+      #print(x)
+      print("Now making frame " + str(x), end='\r')
+      sys.stdout.flush()
+      screen = new_screen()
+      zbuffer = new_zbuffer()
+      stack = [dc(tmp)]
       for i,command in enumerate(commands):
           args = command["args"]
           c = command["op"]
           reflect = ".white"
           if c in knobCommands:
             knob = command["knob"]
-            val = knobValues[x][knob]
-            args = [x * val for x in args]
-            print(args)
+            if knob != None:
+              val = knobValues[x][knob]
+              args = [arg * val if type(arg) in [int, float] else arg for arg in args]
           if c in threeDStuffs:
             const = command["constants"]
             if const != None: reflect = const
@@ -203,13 +213,12 @@ def run(filename):
           if c == "basename": pass
       fname = "anim/" + basename + str(x) + ".png"
       images.append(fname)
+      #I have not fully implemented the add text image feature
+      #so the line below is specific to the gif I am submitting
+      #it will be changed and hopefully added to the mdl.py file
+      #later.
+      #addTextImage(screen, "message.ppm", (round((XRES - 185) * knobValues[x]["k0"]), 0))
       save_extension(screen, fname)
-      screen = new_screen()
-    termCommand = ["convert"] + images  + ["movie.gif"]
+    termCommand = ["convert", "-delay", "3"] + images  + ["movie.gif"]
     subprocess.run(termCommand)
-
-def pass2():
-  pass
-
-def pass3():
-  pass
+    print("Gif name: movie.gif")
