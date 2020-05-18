@@ -1,0 +1,146 @@
+frames 100
+basename solar
+constants sun 1.0 1.0 1.0 .7 .8 .4 .0 .0 .0
+constants mercury .6 .5 .2 .3 .4 .1 .05 .05 .05
+constants venus .8 .7 .4 .5 .6 .2 .1 .1 .1
+constants earth .2 .3 .0 .7 .8 .2 .4 .4 .1
+constants mars .7 .7 .7 .0 .0 .0 .0 .0 .0
+constants jupiter 1 1 1 .5 .5 .5 .1 .1 .1
+constants saturn .9 .9 .9 .6 .6 .6 .2 .2 .2
+constants uranus 0 0 0 .8 .7 .5 .8 .7 .5
+constants neptune 0 0 0 .2 .3 .4 1 1 1
+constants pluto .4 .7 .7 .4 .7 .7 .4 .7 .7
+constants star 1 1 1 1 1 1 1 1 1
+push
+move 500 500 0
+sphere sun 0 0 0 50
+rotate x 20
+rotate z -10
+torus 0 0 0 2 100
+torus 0 0 0 2 130
+torus 0 0 0 2 200
+torus 0 0 0 2 250
+torus 0 0 0 2 300
+torus 0 0 0 2 350
+torus 0 0 0 2 400
+torus 0 0 0 2 430
+torus 0 0 0 2 470
+sphere star -405 22 -20 2
+sphere star 117 -352 -20 2
+sphere star 342 -30 -20 2
+sphere star 37 230 -20 2
+sphere star -262 94 -20 2
+sphere star -203 14 -20 2
+sphere star 495 -253 -20 2
+sphere star -308 -1 -20 2
+sphere star 131 -275 -20 2
+sphere star 434 -274 -20 2
+sphere star 448 441 -20 2
+sphere star -271 105 -20 2
+sphere star -225 -233 -20 2
+sphere star -283 476 -20 2
+sphere star 58 357 -20 2
+sphere star -162 -486 -20 2
+sphere star -293 96 -20 2
+sphere star 77 202 -20 2
+sphere star -93 149 -20 2
+sphere star -16 -136 -20 2
+sphere star -243 480 -20 2
+sphere star -12 -135 -20 2
+sphere star 383 426 -20 2
+sphere star -386 458 -20 2
+sphere star -92 -106 -20 2
+sphere star 115 458 -20 2
+sphere star 352 -169 -20 2
+sphere star 8 -122 -20 2
+sphere star -50 361 -20 2
+sphere star -151 439 -20 2
+sphere star -106 484 -20 2
+sphere star 235 244 -20 2
+sphere star -460 34 -20 2
+sphere star -218 -19 -20 2
+sphere star 314 31 -20 2
+sphere star -36 -383 -20 2
+sphere star 401 45 -20 2
+sphere star -291 -275 -20 2
+sphere star 436 280 -20 2
+sphere star -476 9 -20 2
+sphere star 159 210 -20 2
+sphere star 207 -22 -20 2
+sphere star 147 -395 -20 2
+sphere star 62 117 -20 2
+sphere star 439 -475 -20 2
+sphere star 119 -460 -20 2
+sphere star 353 -61 -20 2
+sphere star 181 206 -20 2
+sphere star 255 466 -20 2
+sphere star -366 -119 -20 2
+sphere star 208 100 -20 2
+sphere star -232 149 -20 2
+sphere star 449 89 -20 2
+sphere star 363 338 -20 2
+sphere star -48 168 -20 2
+sphere star 65 35 -20 2
+sphere star -68 -100 -20 2
+sphere star 447 449 -20 2
+sphere star -330 -117 -20 2
+sphere star 355 -256 -20 2
+sphere star -59 -304 -20 2
+sphere star 484 -238 -20 2
+sphere star 186 -27 -20 2
+sphere star 106 114 -20 2
+sphere star 484 104 -20 2
+sphere star -292 -476 -20 2
+sphere star 148 341 -20 2
+sphere star 109 -238 -20 2
+sphere star -432 46 -20 2
+sphere star -54 166 -20 2
+sphere star -458 -16 -20 2
+sphere star -421 -29 -20 2
+sphere star -114 -153 -20 2
+sphere star 216 -85 -20 2
+sphere star -422 -183 -20 2
+sphere star -310 12 -20 2
+sphere star 417 -57 -20 2
+sphere star -365 413 -20 2
+sphere star -499 43 -20 2
+sphere star 489 -260 -20 2
+sphere star -184 158 -20 2
+sphere star 307 117 -20 2
+sphere star 47 -460 -20 2
+sphere star 423 286 -20 2
+sphere star 227 -243 -20 2
+sphere star -295 -366 -20 2
+sphere star -257 48 -20 2
+sphere star 7 -492 -20 2
+sphere star 385 -392 -20 2
+sphere star 18 -263 -20 2
+sphere star 139 391 -20 2
+sphere star -250 -252 -20 2
+sphere star 9 -437 -20 2
+sphere star 187 -313 -20 2
+sphere star -449 -327 -20 2
+sphere star 127 -221 -20 2
+sphere star -168 -269 -20 2
+sphere star -60 50 -20 2
+sphere star -338 -166 -20 2
+sphere star 316 358 -20 2
+rotate y 360 knob
+sphere mercury 100 0 0 10
+rotate y 150
+sphere venus 130 0 0 15
+rotate y 300
+sphere earth 200 0 0 22
+rotate y 220
+sphere mars 250 0 0 17
+rotate y 30
+sphere jupiter 300 0 0 30
+rotate y 50
+sphere saturn 350 0 0 27
+rotate y 200
+sphere uranus 400 0 0 25
+rotate y 60
+sphere neptune 430 0 0 25
+rotate y 200
+sphere pluto 470 0 0 15
+vary knob 0 99 0 1
